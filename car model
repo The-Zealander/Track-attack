@@ -1,0 +1,48 @@
+--car model
+function _init()
+//left front wheel
+lfwx0=50
+lfwy0=50
+lfwx1=50
+lfwy1=47
+//right front wheel
+rfwx0=56
+rfwy0=50
+rfwx1=56
+rfwy1=47
+//left back wheel
+lbwx0=50
+lbwy0=60
+lbwx1=50
+lbwy1=57
+//right back wheel
+rbwx0=56
+rbwy0=60
+rbwx1=56
+rbwy1=57
+//wheel color
+wc=0
+//car body
+cbx0 = 50
+cby0 = 46
+cbx1 = 56
+cby1 = 61
+cbc = 8
+
+end
+
+function _update()
+end
+
+function _draw()
+cls(7)
+// draw car body
+ovalfill(cbx0,cby0,cbx1,cby1,cbc)
+//draw front wheels
+line(lfwx0,lfwy0,lfwx1,lfwy1,wc)
+line(rfwx0,rfwy0,rfwx1,rfwy1,wc)
+//draw back wheels
+line(lbwx0,lbwy0,lbwx1,lbwy1,wc)
+line(rbwx0,rbwy0,rbwx1,rbwy1,wc)
+
+end
